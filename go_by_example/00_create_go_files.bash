@@ -90,9 +90,13 @@ topics=(
 
 # Iterate over the topics array
 for topic in "${topics[@]}"; do
-    # Replace spaces with hyphens and convert to lowercase
-    filename=$(echo "$topic" | tr ' ' '-' | tr '[:upper:]' '[:lower:]').go
+    # Replace spaces and slashes with hyphens, convert to lowercase, and remove invalid characters
+    dirname=$(echo "$topic" | tr ' /' '-' | tr '[:upper:]' '[:lower:]')
+    filename="$dirname/$dirname.go"
     
-    # Create the .go file and add the package main declaration
+    # Create the subdirectory
+    mkdir -p "$dirname"
+    
+    # Create the .go file in the subdirectory and add the package main declaration
     echo "package main" > "$filename"
 done
