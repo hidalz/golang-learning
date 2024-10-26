@@ -24,7 +24,6 @@ func f(arg int) (int, error) {
 func main() {
 	_, err := f(42)
 	var ae *argError
-
 	if errors.As(err, &ae) {
 		fmt.Println(ae.arg)
 		fmt.Println(ae.message)
