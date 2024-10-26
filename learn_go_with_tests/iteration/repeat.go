@@ -7,3 +7,7 @@ func Repeat(character string, number int) string {
 	}
 	return repeated
 }
+
+func ConcatenateFoo(word string) string {
+	return word + "foo"
+}

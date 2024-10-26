@@ -1,6 +1,7 @@
 package iteration
 
 import (
+	"fmt"
 	"testing"
 )
 
@@ -13,6 +14,14 @@ func TestRepeat(t *testing.T) {
 	}
 }
 
+func TestConcatenateFoo(t *testing.T) {
+	concatenated := ConcatenateFoo("b")
+	expected := "bfoo"
+
+	if concatenated != expected {
+		t.Errorf("want %q but got %q", expected, concatenated)
+	}
+}
 func BenchmarkRepeat(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		Repeat("a", 5)
@@ -20,6 +29,6 @@ func BenchmarkRepeat(b *testing.B) {
 }
 
 func ExampleRepeat() {
-	Repeat("a", 5)
+	fmt.Println(Repeat("a", 5))
 	//Output: aaaaa
 }
