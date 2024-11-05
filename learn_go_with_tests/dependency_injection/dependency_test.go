@@ -1,8 +1,11 @@
-package dependencyinjection
+package main
 
-import "bytes"
+import (
+	"bytes"
+	"testing"
+)
 
-func TestGreet(t *testing.T){
+func TestGreet(t *testing.T) {
 	buffer := bytes.Buffer{}
 	Greet(&buffer, "Chris")
 
@@ -10,6 +13,6 @@ func TestGreet(t *testing.T){
 	want := "Hello, Chris"
 
 	if got != want {
-		t.Errorf()got %q want %q", got, want)
+		t.Errorf("got %q want %q", got, want)
 	}
 }
