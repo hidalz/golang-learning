@@ -7,7 +7,6 @@ import (
 	"testing"
 	"testing/fstest"
 
-	blogposts "github.com/hidalz/blogposts"
 )
 
 type StubFailingFS struct {
