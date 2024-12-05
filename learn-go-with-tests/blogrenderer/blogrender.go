@@ -3,7 +3,8 @@ package blogrenderer
 import (
 	"fmt"
 	"io"
-	"github.com/hidalz/blogposts"
+
+	"github.com/hidalz/golang-learning/blogrenderer"
 )
 
 func Render(w io.Writer, p blogposts.Post) error {
