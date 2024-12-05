@@ -1,3 +1,3 @@
-module "github.com/hidalz/golang-learning/learn-go-with-tests/blogrenderer"
+module blogrenderer
 
-go 1.23.3
+go 1.23.4
