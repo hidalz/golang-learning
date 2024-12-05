@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/hidalz/golang_learning/learn_go_with_tests/blogposts"
-	"github.com/hidalz/golang_learning/learn_go_with_tests/blogrenderer"
+	"github.com/hidalz/blogposts"
+	"github.com/hidalz/blogrenderer"
 )
 
 func TestRender(t *testing.T) {
