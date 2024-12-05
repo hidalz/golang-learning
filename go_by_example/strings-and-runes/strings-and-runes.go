@@ -6,7 +6,6 @@ import (
 )
 
 func main() {
-
 	const s = "สวัสดี"
 
 	fmt.Println("Len:", len(s))
@@ -33,7 +32,6 @@ func main() {
 }
 
 func examineRune(r rune) {
-
 	if r == 't' {
 		fmt.Println("found tee")
 	} else if r == 'ส' {

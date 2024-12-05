@@ -13,8 +13,10 @@ func f(arg int) (int, error) {
 	return arg + 3, nil
 }
 
-var ErrOutOfTea = fmt.Errorf("no more tea available")
-var ErrPower = fmt.Errorf("can't boil water")
+var (
+	ErrOutOfTea = fmt.Errorf("no more tea available")
+	ErrPower    = fmt.Errorf("can't boil water")
+)
 
 func makeTea(arg int) error {
 	if arg == 2 {
@@ -27,7 +29,6 @@ func makeTea(arg int) error {
 
 func main() {
 	for _, i := range []int{7, 42} {
-
 		if r, e := f(i); e != nil {
 			fmt.Println("f failed:", e)
 		} else {

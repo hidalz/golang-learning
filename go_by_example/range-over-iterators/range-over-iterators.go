@@ -34,7 +34,7 @@ func (lst *List[T]) All() iter.Seq[T] { // Function signature, it is just a clos
 			}
 		}
 	}
-} //TODO: review iterators and the closure-based iterator pattern in Go. Still don't get it fully..
+} // TODO: review iterators and the closure-based iterator pattern in Go. Still don't get it fully..
 /*
 The code you provided demonstrates the closure-based iterator pattern in Go. This pattern allows you to define an iterator function that can be used in a for loop to iterate over a collection of values.
 
@@ -84,17 +84,17 @@ func main() {
 			break
 		}
 		/*
-			In this code, there is an if statement that checks if the value of n is greater than 
-			or equal to 10. If this condition is true, the break statement is executed. This causes 
+			In this code, there is an if statement that checks if the value of n is greater than
+			or equal to 10. If this condition is true, the break statement is executed. This causes
 			the loop to exit immediately, skipping any remaining iterations.
 
-			This code snippet is inside a loop that iterates over a collection using the range 
-			keyword. The range keyword is used to iterate over elements of an array, slice, 
-			string, map, or channel. In each iteration, the iterator's yield function is called to 
+			This code snippet is inside a loop that iterates over a collection using the range
+			keyword. The range keyword is used to iterate over elements of an array, slice,
+			string, map, or channel. In each iteration, the iterator's yield function is called to
 			provide the next value from the collection.
 
-			When the loop encounters the break statement, it exits the loop and the iterator's yield 
-			function returns false. This indicates to the loop that there are no more values to 
+			When the loop encounters the break statement, it exits the loop and the iterator's yield
+			function returns false. This indicates to the loop that there are no more values to
 			iterate over, and the loop terminates.
 		*/
 		fmt.Println(n)

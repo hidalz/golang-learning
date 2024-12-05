@@ -58,6 +58,7 @@ func (s *SpyStore) Fetch(ctx context.Context) (string, error) {
 		return res, nil
 	}
 }
+
 func TestServer(t *testing.T) {
 	t.Run("tells store to cancel work if request is cancelled", func(t *testing.T) {
 		data := "hello, world"
@@ -77,7 +78,6 @@ func TestServer(t *testing.T) {
 		if response.written {
 			t.Error("a response should not have been written")
 		}
-
 	})
 
 	t.Run("returns data from store", func(t *testing.T) {

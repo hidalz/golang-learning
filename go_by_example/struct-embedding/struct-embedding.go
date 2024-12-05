@@ -33,6 +33,6 @@ func main() {
 		describe() string
 	}
 
-	var d describer = co //Embedding structs with methods may be used to bestow interface implementations onto other structs. Here we see that a container now implements the describer interface because it embeds base.
+	var d describer = co // Embedding structs with methods may be used to bestow interface implementations onto other structs. Here we see that a container now implements the describer interface because it embeds base.
 	fmt.Println("describer:", d.describe())
 }

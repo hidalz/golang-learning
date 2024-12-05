@@ -18,7 +18,6 @@ func CheckWebsites(wc WebsiteChecker, urls []string) map[string]bool {
 		}(url)
 	}
 
-
 	// One at a time now to unpack
 	for i := 0; i < len(urls); i++ {
 		// Receive expression

@@ -31,6 +31,7 @@ func (r rect) perim() float64 {
 func (c circle) area() float64 {
 	return math.Pi * math.Pow(c.radius, 2)
 }
+
 func (c circle) perim() float64 {
 	return math.Pi * 2 * c.radius
 }

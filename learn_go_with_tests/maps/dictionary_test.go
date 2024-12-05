@@ -3,7 +3,6 @@ package dictionary
 import "testing"
 
 func TestSearch(t *testing.T) {
-
 	dictionary := Dictionary{"test": "this is just a test"}
 	t.Run("known word", func(t *testing.T) {
 		got, _ := dictionary.Search("test")
@@ -80,6 +79,7 @@ func TestDelete(t *testing.T) {
 	_, err := dictionary.Search(word)
 	assertError(t, err, ErrNotFound)
 }
+
 func assertStrings(t testing.TB, got, want string) {
 	t.Helper()
 
@@ -100,7 +100,6 @@ func assertDefinition(t testing.TB, dictionary Dictionary, word, definition stri
 	t.Helper()
 
 	got, err := dictionary.Search(word)
-
 	if err != nil {
 		t.Fatal("should find added word:", err)
 	}

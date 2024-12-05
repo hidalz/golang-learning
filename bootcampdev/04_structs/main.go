@@ -63,10 +63,11 @@ package main
 //         password: "myPassword",
 //     }
 
-//     // Use the getBasicAuth method
-//     authHeader := authInfo.getBasicAuth()
-//     fmt.Println(authHeader)
-// }
+//	    // Use the getBasicAuth method
+//	    authHeader := authInfo.getBasicAuth()
+//	    fmt.Println(authHeader)
+//	}
+//
 // 7. Memory layout
 type contact struct {
 	sendingLimit int32

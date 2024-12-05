@@ -35,40 +35,48 @@ func TestWalk(t *testing.T) {
 				City string
 			}{"Chris", "London"},
 			[]string{"Chris", "London"},
-		}, {
+		},
+		{
 			"struct with non string fields",
 			struct {
 				Name string
 				Age  int
 			}{"Chris", 33},
 			[]string{"Chris"},
-		}, {
+		},
+		{
 			"nested fields",
 			Person{
 				"Chris",
-				Profile{33, "London"}},
+				Profile{33, "London"},
+			},
 			[]string{"Chris", "London"},
-		}, {
+		},
+		{
 			"Pointers to things",
 			&Person{
 				"Chris",
-				Profile{33, "London"}},
+				Profile{33, "London"},
+			},
 			[]string{"Chris", "London"},
-		}, {
+		},
+		{
 			"slices",
 			[]Profile{
 				{33, "London"},
 				{34, "Reykjavik"},
 			},
 			[]string{"London", "Reykjavik"},
-		}, {
+		},
+		{
 			"arrays",
 			[2]Profile{
 				{33, "London"},
 				{34, "Reykjavik"},
 			},
 			[]string{"London", "Reykjavik"},
-		}}
+		},
+	}
 
 	for _, test := range cases {
 		t.Run(test.Name, func(t *testing.T) {
@@ -134,8 +142,8 @@ func TestWalk(t *testing.T) {
 			t.Errorf("got %v, want %v", got, want)
 		}
 	})
-
 }
+
 func assertContains(t testing.TB, haystack []string, needle string) {
 	t.Helper()
 	contains := false

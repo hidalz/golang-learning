@@ -7,10 +7,10 @@ import (
 	"testing"
 	"testing/fstest"
 
+	"github.com/hidalz/blogposts"
 )
 
-type StubFailingFS struct {
-}
+type StubFailingFS struct{}
 
 func (s StubFailingFS) Open(name string) (fs.File, error) {
 	return nil, errors.New("oh no, i always fail")
@@ -40,7 +40,6 @@ M`
 	}
 
 	posts, err := blogposts.NewPostsFromFS(fs)
-
 	if err != nil {
 		t.Fatal(err)
 	}

@@ -22,6 +22,7 @@ func TestConcatenateFoo(t *testing.T) {
 		t.Errorf("want %q but got %q", expected, concatenated)
 	}
 }
+
 func BenchmarkRepeat(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		Repeat("a", 5)
@@ -30,5 +31,5 @@ func BenchmarkRepeat(b *testing.B) {
 
 func ExampleRepeat() {
 	fmt.Println(Repeat("a", 5))
-	//Output: aaaaa
+	// Output: aaaaa
 }

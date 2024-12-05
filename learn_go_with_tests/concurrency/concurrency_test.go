@@ -34,6 +34,7 @@ func slowStudyWebsiteChecker(_ string) bool {
 	time.Sleep(20 * time.Millisecond)
 	return true
 }
+
 func BenchmarkCheckWebsites(b *testing.B) {
 	urls := make([]string, 1000)
 

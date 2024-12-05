@@ -43,7 +43,7 @@ func (lst *List[T]) AllElements() []T {
 }
 
 func main() {
-	var s = []string{"foo", "bar", "zoo"}
+	s := []string{"foo", "bar", "zoo"}
 	fmt.Println("index of zoo:", SlicesIndex(s, "zoo"))
 
 	_ = SlicesIndex[[]string, string](s, "zoo") // Compiler infers type... But we can specify them explicitly.

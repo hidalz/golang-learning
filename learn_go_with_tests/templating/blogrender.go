@@ -1,10 +1,10 @@
 package blogrenderer
 
 import (
-	"github.com/hidalz/learn_go_with_tests/blogposts"
-	"github.com/hidalz/learn_go_with_tests/blogrenderer"
 	"fmt"
 	"io"
+
+	"github.com/hidalz/golang_learning/learn_go_with_tests/blogposts"
 )
 
 func Render(w io.Writer, p blogposts.Post) error {

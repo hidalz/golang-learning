@@ -7,8 +7,10 @@ import (
 	"time"
 )
 
-const write = "write"
-const sleep = "sleep"
+const (
+	write = "write"
+	sleep = "sleep"
+)
 
 type SpyCountdownOperations struct {
 	Calls []string
@@ -33,7 +35,6 @@ func (s *SpyTime) Sleep(duration time.Duration) {
 
 func TestCountdown(t *testing.T) {
 	t.Run("prints 3 to Go!", func(t *testing.T) {
-
 		buffer := &bytes.Buffer{}
 		SpyCountdownOperations := &SpyCountdownOperations{}
 
@@ -68,7 +69,6 @@ Go!`
 			t.Errorf("wanted calls %v got %v", want, spySleepPrinter.Calls)
 		}
 	})
-
 }
 
 func TestConfigurableSle(t *testing.T) {

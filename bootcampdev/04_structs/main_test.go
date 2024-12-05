@@ -246,7 +246,6 @@ import (
 // // on which button is used to run the tests
 // var withSubmit = true
 
-
 // 6. Struct methods in Go
 
 func TestGetBasicAuth(t *testing.T) {
