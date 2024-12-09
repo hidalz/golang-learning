@@ -1,13 +1,27 @@
 package blogrenderer
 
 import (
-	"fmt"
+	"blogposts"
+	"embed"
+	"html/template"
 	"io"
+)
 
-	"github.com/hidalz/golang-learning/blogrenderer"
+var (
+	//go:embed "templates/*"
+	postTemplates embed.FS
 )
 
 func Render(w io.Writer, p blogposts.Post) error {
-	_, err := fmt.Fprintf(w, "<h1>%s</h1>", p.Title)
-	return err
+	templ, err := template.ParseFS(postTemplates, "templates/*.gohtml")
+
+	if err != nil {
+		return err
+	}
+
+	if err := templ.ExecuteTemplate(w, "blog.gohtml", p); err != nil {
+		return err
+	}
+
+	return nil
 }
