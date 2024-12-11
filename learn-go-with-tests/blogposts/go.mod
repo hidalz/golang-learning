@@ -1,3 +1,3 @@
-module "github.com/hidalz/golang-learning/learn-go-with-tests/blogposts"
+module blogposts
 
 go 1.23.3
